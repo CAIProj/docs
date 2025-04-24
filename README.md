@@ -1,2 +1,1 @@
-This repository is intended for documentation for our project
-
+UML diagram files (`.drawio`) can be opened and edited using [draw.io](https://draw.io).
