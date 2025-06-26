@@ -4,19 +4,6 @@
 Ideal for hiking, biking, or route analysis.
 
 ---
-
-## 🗂 Table of Contents
-
-- [Features](#-features)  
-- [Screenshots](#-screenshots)  
-- [Installation](#-installation)  
-- [Testing & Code Coverage](#-testing--code-coverage)  
-- [Project Structure](#-project-structure)  
-- [Contributing](#-contributing)  
-- [License](#-license)
-
----
-
 ## Features
 
 -  Live GPS tracking (start/stop)
@@ -28,13 +15,6 @@ Ideal for hiking, biking, or route analysis.
 -  Notification system (local alerts)
 
 ---
-
-## Screenshots
-
-> *(Add screenshots from the app here to showcase tracking, UI, etc.)*
-
----
-
 ## Installation
 
 ### Requirements
