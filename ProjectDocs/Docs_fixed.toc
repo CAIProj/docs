@@ -1,0 +1,34 @@
+\contentsline {section}{\numberline {1}Project Overview}{3}{section.1}%
+\contentsline {section}{\numberline {2}Installation}{3}{section.2}%
+\contentsline {section}{\numberline {3}Project Management}{4}{section.3}%
+\contentsline {section}{\numberline {4}Licensing}{4}{section.4}%
+\contentsline {section}{\numberline {5}Notable Events}{4}{section.5}%
+\contentsline {section}{\numberline {6}Project Members}{5}{section.6}%
+\contentsline {section}{\numberline {7}Tasks and Responsibilities (Summary Table Format)}{6}{section.7}%
+\contentsline {section}{\numberline {8}Use case diagram}{13}{section.8}%
+\contentsline {section}{\numberline {9}Plotting}{18}{section.9}%
+\contentsline {section}{\numberline {10}APIs}{22}{section.10}%
+\contentsline {section}{\numberline {11}Frontend Testing}{22}{section.11}%
+\contentsline {subsection}{\numberline {11.1}User Interface Tests}{23}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Functionality Tests}{23}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Data Management Tests}{23}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Error Handling Tests}{24}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Performance Tests}{24}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Plotting Method Tests}{24}{subsection.11.6}%
+\contentsline {section}{\numberline {12}Backend Testing}{25}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Plotter Class Testing (\texttt {test\_plotter.py})}{25}{subsection.12.1}%
+\contentsline {paragraph}{a. Initialization Tests (\texttt {test\_init\_*})}{26}{subsection.12.1}%
+\contentsline {paragraph}{b. Unique Name Generation Tests (\texttt {\_generate\_unique\_name})}{27}{subsection.12.1}%
+\contentsline {paragraph}{c. Adding Profiles Tests (\texttt {add\_profiles})}{27}{subsection.12.1}%
+\contentsline {paragraph}{d. Setting Profiles Tests (\texttt {set\_profiles})}{27}{subsection.12.1}%
+\contentsline {paragraph}{e. Plotting Method Tests}{27}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Model Classes Testing (\texttt {test\_models.py})}{28}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Elevation API Testing (\texttt {test\_elevation\_api.py})}{30}{subsection.12.3}%
+\contentsline {paragraph}{4.1 Handling Empty List of Points}{31}{subsection.12.3}%
+\contentsline {paragraph}{4.2 Successful API Response}{31}{subsection.12.3}%
+\contentsline {paragraph}{4.3 HTTP Error Response (4xx/5xx)}{31}{subsection.12.3}%
+\contentsline {paragraph}{4.4 Network Connection Error}{31}{subsection.12.3}%
+\contentsline {paragraph}{4.5 Generic Unexpected Exception}{31}{subsection.12.3}%
+\contentsline {section}{\numberline {13}GUI}{33}{section.13}%
+\contentsline {section}{\numberline {14}GitHub Repository Structure}{35}{section.14}%
+\contentsline {section}{\numberline {15}Conclusion}{37}{section.15}%
