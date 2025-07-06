@@ -151,17 +151,26 @@ Himanka Ashan & T2 & Git Options & Chose GitHub after university option failed. 
 & T26 & Backend Framework & Backend server implemented with FastAPI \\
 & Task & Android studio java & Implemented a tracking application in android studio from scratch. \\
 \midrule
-& T3 & Git Structure & Suggested initial repo structure. \\
+Susheel Kumar & T3 & Git Structure & Suggested initial repo structure. \\
 & T6 & Altitude DBs & Researched databases: SRTM, ASTER, Copernicus, etc. \\
-& T16 & Use Case Diagram for Andriod App & App’s operational workflow \\
+& T16 & Use Case Diagram for Tracking App & App’s operational workflow. \\
 & T23 & Modules of app & Modularization of app. \\
+& T23 & Class diagram for Tracking App &  Created class diagram for the tracking app. \\
 & T27 & Backend Testing & Test plan created  \\
 & Task & Backend Testing & 3 tests (plotter.py, models.py, evelation\_api.py) documented  \\
 \midrule
 Prashil Rupapara & T3 & Git Structure & Suggested initial repo structure. \\
 & T6 & Altitude DBs & Researched databases: SRTM, ASTER, Copernicus, etc. \\
-& T16 & Use Case Diagram for Andriod App & App’s operational workflow \\
+& T16 & Use Case Diagram for Tracking App & App’s operational workflow. \\
 & T23 & Modules of app & Modularization of app. \\
+& T23 & Class diagram for Tracking App &  Created class diagram for the tracking app. \\
+& T24 & Unifying scripts & Unified the scripts of the backend and update it if needed. \\
+& Task & Pull request merging & Merged pull requests for backend repo. \\
+& Task & Final Unification & Did final unification needed after addition of synchronised plotting. \\
+& Task & Update plotting with main & Added functionality to have multipe plots(with any of the api and smoothing method) with CLI usage. \\
+& Task & Python dependency management & Made possible to have easy ython setup locally with just few commands in terminal. \\
+& Task & Create class diagram & Created class diagram with the relationship in between for backend. \\
+& Task & Update README.md & Updated and added needed information and links in README.md file. \\
 \midrule
 Isaac Ye & T8 & GPX file parsing logic & Wrote parsing logic, distance vs elevation graph. \\
 & T22 & UI prototypes for use cases & Created prototypes according to T16. \\
@@ -260,7 +269,7 @@ Freely accessible databases
 We identified freely accessible altitude databases and evaluate their accuracy. The findings revealed variations in altitude precision among available resources, with some datasets offering higher resolution for specific regions. Open-source accessibility played a key role in determining the usability of the databases, providing valuable data for geographic and environmental analysis. The comparison underscores the importance of selecting appropriate altitude datasets based on accuracy requirements and intended applications.
 
 Use case diagram
-We created a detailed use case diagram was developed for the Android tracking app, outlining complete use cases and their corresponding actions. The diagram specifies interactions between users, system components, and key functionalities, providing a structured representation of the app’s operational workflow
+We created a detailed use case diagram was developed for the Android tracking app, outlining complete use cases and their corresponding actions. The diagram specifies interactions between users, system components, and key functionalities, providing a structured representation of the app’s operational workflow.
 
 Modules of app
 We had to determine different modules of the app so that they could be assigned to different development teams, the result was modularization of app and suggestion for tasks which could be assigned to different teams
@@ -268,6 +277,19 @@ We had to determine different modules of the app so that they could be assigned 
 {\large\textbf{Susheel Kumar}}
 Backend test plan
 A test plan was developed to evaluate the backend functionality of the app. Key features requiring testing were identified, and appropriate test approaches were determined to ensure comprehensive validation. The plan aimed to enhance reliability, optimize system performance, and address potential issues before deployment.
+
+{\large\textbf{Prashil Rupapara}}
+Extensive contributions were made to the backend structure, CLI plotting functionality, environment setup, and project documentation, with a focus on maintainability, usability, and modular design.
+
+Various backend Python scripts—including those for GPX parsing, elevation API integration, smoothing, and plotting—were unified into a modular and logically structured architecture. Final refactoring was performed after the addition of synchronized plotting capabilities to maintain a coherent and testable codebase.
+
+The command-line interface (\texttt{main.py}) was extended to support multiple elevation sources and smoothing techniques such as \texttt{--add-openelevation} and \texttt{--add-loess1}. For synchronized plotting, validation logic was implemented to ensure only one comparison source could be used at a time, while non-synced plotting supports multiple sources simultaneously. These enhancements provided a flexible and user-friendly CLI experience.
+
+Python dependency management was handled using \texttt{Poetry}. Both \texttt{pyproject.toml} and \texttt{requirements.txt} files were added to support different setup preferences. The environment setup was tested and verified on Windows 11 machine.
+
+UML class diagrams for backend components were created independently using Mermaid syntax. Key classes such as \texttt{Track}, \texttt{ElevationProfile}, \texttt{OpenStreetMapElevationAPI}, and \texttt{Plotter}  were included, along with their internal relationships. These diagrams served as a useful reference for both implementation and documentation.
+
+The \texttt{README.md} file was updated to include local development setup instructions, links to example Jupyter notebooks, and embedded references to backend class diagram files. These documentation efforts enhanced onboarding and usability for future contributors.
 
 {\large\textbf{Tom Williams}}
 Deciding which License to use.
@@ -509,6 +531,29 @@ The resulting application and backend form a complete open-source framework for 
     \centering
     \includegraphics[width=\textwidth]{Project_Screenshots/recordingdata.png}
     \caption{Track details, Post-processing}
+\end{figure}
+
+\clearpage
+\section{Backend Class Diagrams}
+
+The following UML diagrams provide an overview of the core backend components implemented in this project. These class diagrams cover data models, elevation APIs, and plotting logic.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=0.8\textheight]{Project_Screenshots/class_diagram_models.png}
+    \caption{Class diagram of backend data models (\texttt{Point}, \texttt{Track}, \texttt{ElevationProfile})}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Project_Screenshots/class_diagram_elevation_apis.png}
+    \caption{Class diagram of elevation API components (\texttt{OpenElevationAPI}, \texttt{OpenElevationAPI}, etc.)}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Project_Screenshots/class_diagram_plotter.png}
+    \caption{Class diagram of plotting classes (\texttt{Plotter}, \texttt{SynchronizedElevationPlotter})}
 \end{figure}
 
 \clearpage
@@ -1013,13 +1058,17 @@ TrackINJava/
 backend/
 |
 |-- data/
-|-- notebooks/
+|-- docs/
 |-- src/
 |-- test/
 |
 |-- .gitignore
 |-- LICENSE
-`-- README.md
+|-- README.md
+|-- main.py
+|-- poetry.lock
+|-- pyproject.toml
+|-- requirements.txt
 \end{verbatim}
 
 \subsection*{frontend}
