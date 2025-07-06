@@ -7,29 +7,30 @@
 \contentsline {section}{\numberline {7}Tasks and Responsibilities (Summary Table Format)}{6}{section.7}%
 \contentsline {section}{\numberline {8}Use case diagram}{14}{section.8}%
 \contentsline {section}{\numberline {9}Backend Class Diagrams}{19}{section.9}%
-\contentsline {section}{\numberline {10}Plotting}{21}{section.10}%
-\contentsline {section}{\numberline {11}APIs}{25}{section.11}%
-\contentsline {section}{\numberline {12}Frontend Testing}{25}{section.12}%
-\contentsline {subsection}{\numberline {12.1}User Interface Tests}{26}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Functionality Tests}{26}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Data Management Tests}{26}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}Error Handling Tests}{27}{subsection.12.4}%
-\contentsline {subsection}{\numberline {12.5}Performance Tests}{27}{subsection.12.5}%
-\contentsline {subsection}{\numberline {12.6}Plotting Method Tests}{27}{subsection.12.6}%
-\contentsline {section}{\numberline {13}Backend Testing}{28}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Plotter Class Testing (\texttt {test\_plotter.py})}{28}{subsection.13.1}%
-\contentsline {paragraph}{a. Initialization Tests (\texttt {test\_init\_*})}{29}{subsection.13.1}%
-\contentsline {paragraph}{b. Unique Name Generation Tests (\texttt {\_generate\_unique\_name})}{30}{subsection.13.1}%
-\contentsline {paragraph}{c. Adding Profiles Tests (\texttt {add\_profiles})}{30}{subsection.13.1}%
-\contentsline {paragraph}{d. Setting Profiles Tests (\texttt {set\_profiles})}{30}{subsection.13.1}%
-\contentsline {paragraph}{e. Plotting Method Tests}{30}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Model Classes Testing (\texttt {test\_models.py})}{31}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Elevation API Testing (\texttt {test\_elevation\_api.py})}{33}{subsection.13.3}%
-\contentsline {paragraph}{4.1 Handling Empty List of Points}{34}{subsection.13.3}%
-\contentsline {paragraph}{4.2 Successful API Response}{34}{subsection.13.3}%
-\contentsline {paragraph}{4.3 HTTP Error Response (4xx/5xx)}{34}{subsection.13.3}%
-\contentsline {paragraph}{4.4 Network Connection Error}{34}{subsection.13.3}%
-\contentsline {paragraph}{4.5 Generic Unexpected Exception}{34}{subsection.13.3}%
-\contentsline {section}{\numberline {14}GUI}{36}{section.14}%
-\contentsline {section}{\numberline {15}GitHub Repository Structure}{38}{section.15}%
-\contentsline {section}{\numberline {16}Conclusion}{40}{section.16}%
+\contentsline {section}{\numberline {10}Backend Setup and CLI Usage}{21}{section.10}%
+\contentsline {section}{\numberline {11}Plotting}{23}{section.11}%
+\contentsline {section}{\numberline {12}APIs}{27}{section.12}%
+\contentsline {section}{\numberline {13}Frontend Testing}{27}{section.13}%
+\contentsline {subsection}{\numberline {13.1}User Interface Tests}{28}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Functionality Tests}{28}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Data Management Tests}{28}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Error Handling Tests}{29}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Performance Tests}{29}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Plotting Method Tests}{29}{subsection.13.6}%
+\contentsline {section}{\numberline {14}Backend Testing}{30}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Plotter Class Testing (\texttt {test\_plotter.py})}{30}{subsection.14.1}%
+\contentsline {paragraph}{a. Initialization Tests (\texttt {test\_init\_*})}{31}{subsection.14.1}%
+\contentsline {paragraph}{b. Unique Name Generation Tests (\texttt {\_generate\_unique\_name})}{32}{subsection.14.1}%
+\contentsline {paragraph}{c. Adding Profiles Tests (\texttt {add\_profiles})}{32}{subsection.14.1}%
+\contentsline {paragraph}{d. Setting Profiles Tests (\texttt {set\_profiles})}{32}{subsection.14.1}%
+\contentsline {paragraph}{e. Plotting Method Tests}{32}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Model Classes Testing (\texttt {test\_models.py})}{33}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Elevation API Testing (\texttt {test\_elevation\_api.py})}{35}{subsection.14.3}%
+\contentsline {paragraph}{4.1 Handling Empty List of Points}{36}{subsection.14.3}%
+\contentsline {paragraph}{4.2 Successful API Response}{36}{subsection.14.3}%
+\contentsline {paragraph}{4.3 HTTP Error Response (4xx/5xx)}{36}{subsection.14.3}%
+\contentsline {paragraph}{4.4 Network Connection Error}{36}{subsection.14.3}%
+\contentsline {paragraph}{4.5 Generic Unexpected Exception}{36}{subsection.14.3}%
+\contentsline {section}{\numberline {15}GUI}{38}{section.15}%
+\contentsline {section}{\numberline {16}GitHub Repository Structure}{40}{section.16}%
+\contentsline {section}{\numberline {17}Conclusion}{42}{section.17}%

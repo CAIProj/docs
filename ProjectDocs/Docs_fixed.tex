@@ -11,6 +11,18 @@
 \usepackage{parskip}
 \usepackage{color}
 \usepackage{lscape}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  columns=fullflexible,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{gray!5},
+  showstringspaces=false
+}
+
 \setlength{\headheight}{14.5pt} % <-- fixes fancyhdr warning
 
 \pagestyle{fancy}
@@ -555,6 +567,87 @@ The following UML diagrams provide an overview of the core backend components im
     \includegraphics[width=\textwidth]{Project_Screenshots/class_diagram_plotter.png}
     \caption{Class diagram of plotting classes (\texttt{Plotter}, \texttt{SynchronizedElevationPlotter})}
 \end{figure}
+
+\clearpage
+\section{Backend Setup and CLI Usage}
+
+\subsection*{Backend Setup}
+
+To run the backend tools locally, the following steps can be followed for setup:
+
+\subsection*{Steps}
+\begin{enumerate}
+    \item Clone the repository:
+    \begin{lstlisting}
+git clone https://github.com/CAIProj/backend.git
+    \end{lstlisting}
+
+    \item Navigate to the project folder:
+    \begin{lstlisting}
+cd backend
+    \end{lstlisting}
+
+    \item Install dependencies using Poetry:
+    \begin{lstlisting}
+pip install poetry
+poetry install --no-root
+    \end{lstlisting}
+
+    \item Alternatively, install dependencies using pip and requirements.txt:
+    \begin{lstlisting}
+pip install -r requirements.txt
+    \end{lstlisting}
+\end{enumerate}
+
+Both installation methods have been tested and verified on Windows environments.
+
+\subsection*{Command-Line Interface (CLI) Usage}
+
+The backend provides a flexible CLI tool through \texttt{main.py}. The general structure of usage is as follows:
+
+\begin{lstlisting}
+python main.py [plot type] [base_gpx] [add source(s)] 
+               [sync method (optional)] [general options]
+\end{lstlisting}
+
+The command consists of multiple components, each configurable through flags:
+
+\textit{Plot Type:}
+\begin{itemize}
+  \item \texttt{3d} — Generate a basic 3D elevation plot.
+  \item \texttt{elevation} — Plot elevation profiles with optional synchronization.
+  \item \texttt{surface} — Generate a 2D surface plot of the elevation profile.
+\end{itemize}
+
+\textit{Base GPX:}  
+The GPX file path is passed as a positional argument after the plot type. This is the base track used for all comparisons.
+
+\textit{Optional Sources (Elevation Data / Smoothing):}
+\begin{itemize}
+  \item \texttt{--second-gpx <path>} — Compare with another GPX file.
+  \item \texttt{--add-openelevation} — Add elevation using OpenElevation API.
+  \item \texttt{--add-openstreetmap} — Add elevation from OpenStreetMap.
+  \item \texttt{--add-loess1}, \texttt{--add-loess2}, \texttt{--add-spline} — Apply elevation smoothing.
+\end{itemize}
+
+\textit{Synchronization (elevation plot only):}
+\begin{itemize}
+  \item \texttt{--sync-method <elevation\_sync | start\_sync | interpolate\_elevations>} — Choose sync method.
+  \item \texttt{--tolerance <km>} — Set distance tolerance.
+  \item \texttt{--tolerance-method <standard | kdtree>} — Select comparison method.
+
+\end{itemize}
+
+\textit{General Options:}
+\begin{itemize}
+  \item \texttt{--output <filename>} — Save the plot instead of displaying it.
+  \item \texttt{--title <text>} — Add a custom title to the plot.
+\end{itemize}
+
+A validation is enforced such that for synchronized plots, only one additional elevation source is allowed at a time. In contrast, for non-synced plots, multiple sources can be added simultaneously. These combinations provide a flexible yet constrained structure for diverse elevation comparisons.
+
+Example usage and output are shown in the demo notebook \texttt{backend\_feature\_examples.ipynb} (see \texttt{docs/backend\_feature\_examples.ipynb} in the backend repository).
+
 
 \clearpage
 \newpage
